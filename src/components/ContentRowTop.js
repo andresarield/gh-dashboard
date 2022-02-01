@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CategoriesInDb from './CategoriesInDb';
 // import imagenFondo from '../assets/images/mandalorian.jpg';
 import ContentRowGames from './ContentRowGames';
+import ProductsInDb from './ProductsInDb';
 
 function ContentRowTop(){
 
@@ -61,6 +62,8 @@ function ContentRowTop(){
 
 						{/*<!-- Categories in DB -->*/}
 						< CategoriesInDb />
+
+						< ProductsInDb />
 
 					</div>
 				</div>
