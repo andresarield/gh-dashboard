@@ -29,19 +29,19 @@ function ContentRowTop(){
         <div className="row">
             <SmallCard
                 color="primary"
-                titulo="Games in DB"
+                titulo="Productos en BD"
                 valor={productCount} 
-                icono= "fas fa-film" 
+                icono= "fas fa-gamepad" 
             />
             <SmallCard
                 color="success"
-                titulo="Users in DB"
+                titulo="Usuarios en BD"
                 valor={userCount} 
                 icono= "fas fa-user" 
             />
             { <SmallCard
                 color="warning"
-                titulo="Categories"
+                titulo="Categorías activas"
                 valor={categoryCount} 
                 icono= "fas fa-tags" 
             /> }
