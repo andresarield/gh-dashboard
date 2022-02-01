@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Category  from './Category';
 
 function CategoriesInDb(){
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState({});
 
     useEffect(() => {
         fetch("/api/products/")
@@ -10,14 +10,15 @@ function CategoriesInDb(){
             return respuesta.json();
           })
           .then((data) => {
-            setCategories(data.countByCategory);
+              console.log(data)
+            setCategories(data.data.countByCategory);
           })
           .catch((error) => console.log(error));
       }, []);
 
     return (
         <React.Fragment>
-                {/* <!-- Categories in DB -->
+                {/* <!-- Categories in DB --> */}
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
@@ -26,14 +27,14 @@ function CategoriesInDb(){
                         <div className="card-body">
                             <div className="row">
                                 {
-                                    categories.map((categories,index)=>{
-                                        return  <Category  categories = {categories}  key={index} />
+                                    Object.entries(categories).map(([categoryName, productCount],index)=>{
+                                        return <li>{ categoryName } : { productCount }</li> 
                                     })
                                 }
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
         </React.Fragment>
     )
 
