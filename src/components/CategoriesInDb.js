@@ -22,15 +22,17 @@ function CategoriesInDb(){
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
-                            <h6 className="m-0 font-weight-bold text-gray-800">Totales por categorías</h6>
+                            <h5 className="m-0 font-weight-bold text-gray-800">Totales por categorías</h5>
                         </div>
                         <div className="card-body">
                             <div className="row">
+                                <ul>
                                 {
                                     Object.entries(categories).map(([categoryName, productCount],index)=>{
                                         return <li>{ categoryName } : { productCount }</li> 
                                     })
                                 }
+                                </ul>
                             </div>
                         </div>
                     </div>
