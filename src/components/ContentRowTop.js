@@ -26,7 +26,7 @@ function ContentRowTop(){
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">GH Dashboard</h1>
+						<h1 className="h3 mb-0 text-gray-800"> <u>GH Dashboard</u></h1>
 					</div>
 				
 					{/*<!-- Content Row Games-->*/}
@@ -50,6 +50,7 @@ function ContentRowTop(){
 									<ul>
 										<li>Precio: ${lastProduct.price}</li>
 										<li>Rubro: {lastProduct.rubro}</li>
+										<li>Categoria: {lastProduct.category}</li>
 
 									</ul>
 									{/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View Game detail</a> */}
