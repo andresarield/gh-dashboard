@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 function ProductsInDb(){
-    const [products, setProducts] = useState({});
+
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch("/api/products/")
@@ -10,6 +11,8 @@ function ProductsInDb(){
           })
           .then((data) => {
             setProducts(data.data.products);
+
+            
           })
           .catch((error) => console.log(error));
       }, []);
@@ -25,17 +28,9 @@ function ProductsInDb(){
                         <div className="card-body">
                             <div className="row">
                                 <ul>
-                                {
-                                    Object.entries(products).map(([product, a],index)=>{
-                                        return (
-                                        
-                                        
-                                        <li>{ product} </li> 
-                                            
-                                            
-                                            )
-                                    })
-                                }
+
+                                {products.map(product => <li>ID: {product.id} - {product.name} - {product.categories[0]} </li> )}
+ 
                                 </ul>
                             </div>
                         </div>

@@ -61,9 +61,11 @@ function ContentRowTop(){
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Categories in DB -->*/}
-						< CategoriesInDb />
-
+						< CategoriesInDb /> 						
+						
 						< ProductsInDb />
+
+						
 
 					</div>
 				</div>
